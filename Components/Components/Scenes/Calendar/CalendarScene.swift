@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct CalendarScene: View {
-  @State private var selectedIdentifier: Calendar.Identifier = .gregorian
-  @State private var selectedDate: Date?
+  @State
+  private var selectedDates: [Date] = []
   
   private var textDate: String {
-    guard let selectedDate else { return "Date not selected" }
+    guard !selectedDates.isEmpty
+    else { return "Date not selected" }
     let formatter = DateFormatter()
-    formatter.dateStyle = .medium
-    return formatter.string(from: selectedDate)
+    formatter.dateStyle = .short
+    let texts = selectedDates.map {
+      formatter.string(from: $0)
+    }
+    return String(
+      texts.joined(separator: "\n")
+    )
   }
   
   var body: some View {
@@ -26,29 +32,11 @@ struct CalendarScene: View {
         Text(textDate)
           .font(.title3)
         Spacer()
-        CalendarView(canSelect: true,
-                     selectedDate: $selectedDate)
+        CalendarView(
+          selectedDates: $selectedDates
+        )
           .scaledToFit()
         Spacer()
-        Picker("", selection: $selectedIdentifier) {
-          Text("Gregorian")
-            .tag(Calendar.Identifier.gregorian)
-          Text("Hebrew")
-            .tag(Calendar.Identifier.hebrew)
-          Text("Chinese")
-            .tag(Calendar.Identifier.chinese)
-          Text("Buddhist")
-            .tag(Calendar.Identifier.buddhist)
-          Text("Coptic")
-            .tag(Calendar.Identifier.coptic)
-          Text("Indian")
-            .tag(Calendar.Identifier.indian)
-          Text("Islamic")
-            .tag(Calendar.Identifier.islamic)
-        }
-        CalendarView(calendarIdentifier: selectedIdentifier,
-                     selectedDate: $selectedDate)
-          .scaledToFit()
       }
     }
     .padding(.horizontal)

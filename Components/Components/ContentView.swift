@@ -14,6 +14,11 @@ struct ContentView: View {
         .tabItem {
           Label("Calendar", systemImage: "calendar")
         }
+      TextfieldScene()
+        .tabItem {
+          Label("Textfield",
+                systemImage: "rectangle.and.pencil.and.ellipsis")
+        }
     }
   }
 }

@@ -13,6 +13,9 @@
 		403C199A29947A1C00A8D839 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403C199929947A1C00A8D839 /* Preview Assets.xcassets */; };
 		403C19A429947A5A00A8D839 /* CalendarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403C19A329947A5A00A8D839 /* CalendarScene.swift */; };
 		4089B8082995C826000510B4 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4089B8072995C826000510B4 /* CalendarView.swift */; };
+		40AD0DD4299F0D1E00DAA2D7 /* CreditCardNumberTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AD0DD3299F0D1E00DAA2D7 /* CreditCardNumberTextfield.swift */; };
+		40AD0DD6299F126700DAA2D7 /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40AD0DD5299F126700DAA2D7 /* DateTextField.swift */; };
+		40B1BB4D299C6DD70007BCE7 /* TextfieldScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B1BB4C299C6DD70007BCE7 /* TextfieldScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		403C199929947A1C00A8D839 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		403C19A329947A5A00A8D839 /* CalendarScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarScene.swift; sourceTree = "<group>"; };
 		4089B8072995C826000510B4 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		40AD0DD3299F0D1E00DAA2D7 /* CreditCardNumberTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardNumberTextfield.swift; sourceTree = "<group>"; };
+		40AD0DD5299F126700DAA2D7 /* DateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTextField.swift; sourceTree = "<group>"; };
+		40B1BB4C299C6DD70007BCE7 /* TextfieldScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 		403C19A029947A4100A8D839 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				40B1BB4B299C6D7F0007BCE7 /* Textfield */,
 				403C19A529947AC700A8D839 /* Calendar */,
 			);
 			path = Scenes;
@@ -89,6 +96,16 @@
 				4089B8072995C826000510B4 /* CalendarView.swift */,
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		40B1BB4B299C6D7F0007BCE7 /* Textfield */ = {
+			isa = PBXGroup;
+			children = (
+				40B1BB4C299C6DD70007BCE7 /* TextfieldScene.swift */,
+				40AD0DD3299F0D1E00DAA2D7 /* CreditCardNumberTextfield.swift */,
+				40AD0DD5299F126700DAA2D7 /* DateTextField.swift */,
+			);
+			path = Textfield;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,10 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B1BB4D299C6DD70007BCE7 /* TextfieldScene.swift in Sources */,
 				403C199429947A1A00A8D839 /* ContentView.swift in Sources */,
 				403C19A429947A5A00A8D839 /* CalendarScene.swift in Sources */,
+				40AD0DD6299F126700DAA2D7 /* DateTextField.swift in Sources */,
 				4089B8082995C826000510B4 /* CalendarView.swift in Sources */,
 				403C199229947A1A00A8D839 /* ComponentsApp.swift in Sources */,
+				40AD0DD4299F0D1E00DAA2D7 /* CreditCardNumberTextfield.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
